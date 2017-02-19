@@ -19,7 +19,7 @@ if len(fileList) < 1:
 
 merge = PdfFileMerger()
 
-for pdf in fileList.sort():
+for pdf in sorted(fileList):
     merge.append(open(pdf, 'rb'))
 
 with open('Merged_PDF.pdf', 'wb') as fout:
